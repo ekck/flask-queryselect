@@ -6,4 +6,13 @@
 
     {{ welcome_message }}
 
+
+	<ul>
+        {% for friend in friends %}
+            <li>
+                {{ friend.name }}
+            </li>
+        {% endfor %}
+        </ul>
+
 {% endblock %}

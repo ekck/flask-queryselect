@@ -3,3 +3,186 @@
 2021-07-14 16:18:17,047 [DEBUG] [                    create_app()] test debug message
 2021-07-14 16:18:17,052 [INFO ] [                          _log()]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 2021-07-14 16:18:20,102 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:18:20] "GET / HTTP/1.1" 200 -
+2021-07-14 16:30:00,724 [DEBUG] [                    create_app()] test debug message
+2021-07-14 16:41:26,023 [DEBUG] [                    create_app()] test debug message
+2021-07-14 16:41:26,029 [INFO ] [                          _log()]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 16:41:29,550 [ERROR] [                 log_exception()] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/manuel/Documents/projects/Flask-queryselct/app/factory.py", line 36, in index
+    friends=friends,
+NameError: name 'friends' is not defined
+2021-07-14 16:41:29,554 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:41:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-07-14 16:41:55,941 [ERROR] [                 log_exception()] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/manuel/Documents/projects/Flask-queryselct/app/factory.py", line 36, in index
+    friends=friends,
+NameError: name 'friends' is not defined
+2021-07-14 16:41:55,960 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:41:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-07-14 16:41:56,896 [ERROR] [                 log_exception()] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/manuel/Documents/projects/Flask-queryselct/app/factory.py", line 36, in index
+    friends=friends,
+NameError: name 'friends' is not defined
+2021-07-14 16:41:56,897 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:41:56] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-07-14 16:44:45,232 [DEBUG] [                    create_app()] test debug message
+2021-07-14 16:44:45,250 [INFO ] [                          _log()]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 16:44:51,878 [ERROR] [                 log_exception()] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/manuel/Documents/projects/Flask-queryselct/app/factory.py", line 36, in index
+    friends=friends,
+NameError: name 'friends' is not defined
+2021-07-14 16:44:51,880 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:44:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-07-14 16:44:52,784 [ERROR] [                 log_exception()] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/manuel/Documents/projects/Flask-queryselct/app/factory.py", line 36, in index
+    friends=friends,
+NameError: name 'friends' is not defined
+2021-07-14 16:44:52,785 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:44:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-07-14 16:45:10,163 [ERROR] [                 log_exception()] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/manuel/Documents/projects/Flask-queryselct/app/factory.py", line 36, in index
+    friends=friends,
+NameError: name 'friends' is not defined
+2021-07-14 16:45:10,173 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:45:10] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-07-14 16:45:10,956 [ERROR] [                 log_exception()] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/manuel/Documents/projects/Flask-queryselct/app/factory.py", line 36, in index
+    friends=friends,
+NameError: name 'friends' is not defined
+2021-07-14 16:45:10,962 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:45:10] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-07-14 16:45:11,213 [ERROR] [                 log_exception()] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/manuel/Documents/projects/Flask-queryselct/app/factory.py", line 36, in index
+    friends=friends,
+NameError: name 'friends' is not defined
+2021-07-14 16:45:11,214 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:45:11] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-07-14 16:45:11,669 [ERROR] [                 log_exception()] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/manuel/Documents/projects/Flask-queryselct/app/factory.py", line 36, in index
+    friends=friends,
+NameError: name 'friends' is not defined
+2021-07-14 16:45:11,669 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:45:11] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-07-14 16:45:50,867 [DEBUG] [                    create_app()] test debug message
+2021-07-14 16:45:50,872 [INFO ] [                          _log()]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 16:45:52,817 [ERROR] [                 log_exception()] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/manuel/Documents/projects/Flask-queryselct/app/factory.py", line 36, in index
+    friend=friend,
+NameError: name 'friend' is not defined
+2021-07-14 16:45:52,819 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:45:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-07-14 16:45:53,567 [ERROR] [                 log_exception()] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/manuel/Documents/projects/Flask-queryselct/app/factory.py", line 36, in index
+    friend=friend,
+NameError: name 'friend' is not defined
+2021-07-14 16:45:53,570 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:45:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-07-14 16:45:54,104 [ERROR] [                 log_exception()] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/manuel/.local/share/virtualenvs/Flask-queryselct-MTQINdPr/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/manuel/Documents/projects/Flask-queryselct/app/factory.py", line 36, in index
+    friend=friend,
+NameError: name 'friend' is not defined
+2021-07-14 16:45:54,105 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:45:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-07-14 16:46:57,093 [DEBUG] [                    create_app()] test debug message
+2021-07-14 16:46:57,100 [INFO ] [                          _log()]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 16:46:59,330 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 16:46:59,334 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 16:46:59,334 [INFO ] [                          info()] [generated in 0.00026s] ()
+2021-07-14 16:46:59,379 [INFO ] [                          info()] ROLLBACK
+2021-07-14 16:46:59,380 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:46:59] "GET / HTTP/1.1" 200 -

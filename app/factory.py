@@ -5,6 +5,7 @@ from flask_wtf.csrf import CSRFProtect
 from flask_bootstrap import Bootstrap
 
 from .services import app_logging, app_db
+from .model import Friend
 
 def create_app():
 
@@ -29,9 +30,11 @@ def create_app():
 
     @app.route('/')
     def index():
+        friends = app_db.session.query(Friend).order_by(Friend.name).all()
         return render_template(
             'home.html',
             welcome_message='Hello world',
+            friends=friends,
         )
 
     return app
