@@ -1,0 +1,5 @@
+2021-07-14 16:17:51,636 [DEBUG] [                    create_app()] test debug message
+2021-07-14 16:17:51,641 [INFO ] [                          _log()]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 16:18:17,047 [DEBUG] [                    create_app()] test debug message
+2021-07-14 16:18:17,052 [INFO ] [                          _log()]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-14 16:18:20,102 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:18:20] "GET / HTTP/1.1" 200 -
