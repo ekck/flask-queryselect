@@ -23,6 +23,11 @@ def create_app():
     csrf = CSRFProtect()
     csrf.init_app(app)
 
+    # blueprints
+    from .blueprints.manage_data.views import manage_data_blueprint
+    app.register_blueprint(manage_data_blueprint, url_prefix='/manage-data')
+
+
     @app.teardown_appcontext
     def teardown_db(response_or_exception):
         if hasattr(app_db, 'session'):
