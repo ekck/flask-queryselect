@@ -369,3 +369,716 @@ WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id OR
 2021-07-14 16:59:05,902 [INFO ] [                          info()] [cached since 44.2s ago] (1,)
 2021-07-14 16:59:05,905 [INFO ] [                          info()] ROLLBACK
 2021-07-14 16:59:05,905 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 16:59:05] "GET /manage-data/friends/list HTTP/1.1" 200 -
+2021-07-14 16:59:57,716 [DEBUG] [                    create_app()] test debug message
+2021-07-14 16:59:57,742 [WARNI] [                          _log()]  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-07-14 16:59:57,742 [INFO ] [                          _log()]  * Running on http://192.168.0.113:5000/ (Press CTRL+C to quit)
+2021-07-14 16:59:57,743 [INFO ] [                          _log()]  * Restarting with stat
+2021-07-14 16:59:58,075 [DEBUG] [                    create_app()] test debug message
+2021-07-14 16:59:58,099 [WARNI] [                          _log()]  * Debugger is active!
+2021-07-14 16:59:58,099 [INFO ] [                          _log()]  * Debugger PIN: 267-593-623
+2021-07-14 16:59:59,992 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 16:59:59,998 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:00:00,000 [INFO ] [                          info()] [generated in 0.00195s] ()
+2021-07-14 17:00:00,038 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:00,039 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:00] "GET / HTTP/1.1" 200 -
+2021-07-14 17:00:01,505 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:01,510 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:00:01,510 [INFO ] [                          info()] [generated in 0.00026s] ()
+2021-07-14 17:00:01,522 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:01,523 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:01] "GET /manage-data/hobbies/list HTTP/1.1" 200 -
+2021-07-14 17:00:02,469 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:02] "GET /manage-data/hobby/new HTTP/1.1" 200 -
+2021-07-14 17:00:12,322 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:12,324 [INFO ] [                          info()] INSERT INTO hobby (name) VALUES (?)
+2021-07-14 17:00:12,324 [INFO ] [                          info()] [generated in 0.00035s] ('swimming',)
+2021-07-14 17:00:12,325 [INFO ] [                          info()] COMMIT
+2021-07-14 17:00:12,523 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:12] "[32mPOST /manage-data/hobby/new HTTP/1.1[0m" 302 -
+2021-07-14 17:00:12,532 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:12,534 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:00:12,535 [INFO ] [                          info()] [cached since 11.03s ago] ()
+2021-07-14 17:00:12,541 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:00:12,542 [INFO ] [                          info()] [generated in 0.00062s] (1,)
+2021-07-14 17:00:12,545 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:12,547 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:12] "GET /manage-data/hobbies/list HTTP/1.1" 200 -
+2021-07-14 17:00:17,340 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:17,341 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:00:17,342 [INFO ] [                          info()] [cached since 17.34s ago] ()
+2021-07-14 17:00:17,344 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:17,345 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:17] "GET / HTTP/1.1" 200 -
+2021-07-14 17:00:18,109 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:18,112 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:00:18,112 [INFO ] [                          info()] [generated in 0.00032s] ()
+2021-07-14 17:00:18,114 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:18,115 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:18] "GET /manage-data/cities/list HTTP/1.1" 200 -
+2021-07-14 17:00:18,948 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:18] "GET /manage-data/city/new HTTP/1.1" 200 -
+2021-07-14 17:00:23,013 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:23,014 [INFO ] [                          info()] INSERT INTO city (name) VALUES (?)
+2021-07-14 17:00:23,015 [INFO ] [                          info()] [generated in 0.00116s] ('nairobi',)
+2021-07-14 17:00:23,017 [INFO ] [                          info()] COMMIT
+2021-07-14 17:00:23,195 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:23] "[32mPOST /manage-data/city/new HTTP/1.1[0m" 302 -
+2021-07-14 17:00:23,204 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:23,204 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:00:23,206 [INFO ] [                          info()] [cached since 5.094s ago] ()
+2021-07-14 17:00:23,209 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE ? = friend.city_id ORDER BY friend.name
+2021-07-14 17:00:23,210 [INFO ] [                          info()] [generated in 0.00043s] (1,)
+2021-07-14 17:00:23,215 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:23,215 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:23] "GET /manage-data/cities/list HTTP/1.1" 200 -
+2021-07-14 17:00:25,454 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:25] "GET /manage-data/city/new HTTP/1.1" 200 -
+2021-07-14 17:00:29,407 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:29,407 [INFO ] [                          info()] INSERT INTO city (name) VALUES (?)
+2021-07-14 17:00:29,408 [INFO ] [                          info()] [cached since 6.394s ago] ('kisumu',)
+2021-07-14 17:00:29,409 [INFO ] [                          info()] COMMIT
+2021-07-14 17:00:29,593 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:29] "[32mPOST /manage-data/city/new HTTP/1.1[0m" 302 -
+2021-07-14 17:00:29,602 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:29,603 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:00:29,603 [INFO ] [                          info()] [cached since 11.49s ago] ()
+2021-07-14 17:00:29,604 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE ? = friend.city_id ORDER BY friend.name
+2021-07-14 17:00:29,604 [INFO ] [                          info()] [cached since 6.395s ago] (2,)
+2021-07-14 17:00:29,606 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE ? = friend.city_id ORDER BY friend.name
+2021-07-14 17:00:29,606 [INFO ] [                          info()] [cached since 6.397s ago] (1,)
+2021-07-14 17:00:29,608 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:29,609 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:29] "GET /manage-data/cities/list HTTP/1.1" 200 -
+2021-07-14 17:00:33,676 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:33,676 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:00:33,676 [INFO ] [                          info()] [cached since 33.68s ago] ()
+2021-07-14 17:00:33,678 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:33,679 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:33] "GET / HTTP/1.1" 200 -
+2021-07-14 17:00:34,666 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:34,667 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:00:34,672 [INFO ] [                          info()] [cached since 34.67s ago] ()
+2021-07-14 17:00:34,676 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:00:34,676 [INFO ] [                          info()] [generated in 0.00046s] (1,)
+2021-07-14 17:00:34,678 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:34,679 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:34] "GET /manage-data/friends/list HTTP/1.1" 200 -
+2021-07-14 17:00:36,958 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:36,959 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:00:36,960 [INFO ] [                          info()] [cached since 18.85s ago] ()
+2021-07-14 17:00:36,965 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:00:36,965 [INFO ] [                          info()] [cached since 35.46s ago] ()
+2021-07-14 17:00:36,967 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:36,968 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:36] "GET /manage-data/friend/new HTTP/1.1" 200 -
+2021-07-14 17:00:44,765 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:44,791 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:00:44,793 [INFO ] [                          info()] [cached since 26.68s ago] ()
+2021-07-14 17:00:44,796 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:00:44,797 [INFO ] [                          info()] [cached since 43.29s ago] ()
+2021-07-14 17:00:44,804 [INFO ] [                          info()] INSERT INTO friend (name, city_id) VALUES (?, ?)
+2021-07-14 17:00:44,806 [INFO ] [                          info()] [generated in 0.00178s] ('Hesbon ', 1)
+2021-07-14 17:00:44,809 [INFO ] [                          info()] INSERT INTO friend_mtm_hobby (friend_id, hobby_id) VALUES (?, ?)
+2021-07-14 17:00:44,810 [INFO ] [                          info()] [generated in 0.00176s] (2, 1)
+2021-07-14 17:00:44,811 [INFO ] [                          info()] COMMIT
+2021-07-14 17:00:44,946 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:44] "[32mPOST /manage-data/friend/new HTTP/1.1[0m" 302 -
+2021-07-14 17:00:44,956 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:44,957 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:00:44,957 [INFO ] [                          info()] [cached since 44.96s ago] ()
+2021-07-14 17:00:44,965 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:00:44,967 [INFO ] [                          info()] [generated in 0.00180s] (1,)
+2021-07-14 17:00:44,971 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:00:44,973 [INFO ] [                          info()] [cached since 10.3s ago] (2,)
+2021-07-14 17:00:44,976 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:00:44,978 [INFO ] [                          info()] [cached since 10.3s ago] (1,)
+2021-07-14 17:00:44,983 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:44,991 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:44] "GET /manage-data/friends/list HTTP/1.1" 200 -
+2021-07-14 17:00:47,797 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:47,797 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:00:47,798 [INFO ] [                          info()] [cached since 47.8s ago] ()
+2021-07-14 17:00:47,799 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:47,800 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:47] "GET / HTTP/1.1" 200 -
+2021-07-14 17:00:48,601 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:48,601 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:00:48,601 [INFO ] [                          info()] [cached since 47.09s ago] ()
+2021-07-14 17:00:48,603 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:00:48,603 [INFO ] [                          info()] [cached since 36.06s ago] (1,)
+2021-07-14 17:00:48,605 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:48,605 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:48] "GET /manage-data/hobbies/list HTTP/1.1" 200 -
+2021-07-14 17:00:49,475 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:49] "GET /manage-data/hobby/new HTTP/1.1" 200 -
+2021-07-14 17:00:53,366 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:53,366 [INFO ] [                          info()] INSERT INTO hobby (name) VALUES (?)
+2021-07-14 17:00:53,366 [INFO ] [                          info()] [cached since 41.04s ago] ('fishing',)
+2021-07-14 17:00:53,367 [INFO ] [                          info()] COMMIT
+2021-07-14 17:00:53,557 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:53] "[32mPOST /manage-data/hobby/new HTTP/1.1[0m" 302 -
+2021-07-14 17:00:53,566 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:00:53,567 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:00:53,567 [INFO ] [                          info()] [cached since 52.06s ago] ()
+2021-07-14 17:00:53,569 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:00:53,569 [INFO ] [                          info()] [cached since 41.03s ago] (2,)
+2021-07-14 17:00:53,571 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:00:53,572 [INFO ] [                          info()] [cached since 41.03s ago] (1,)
+2021-07-14 17:00:53,575 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:00:53,576 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:53] "GET /manage-data/hobbies/list HTTP/1.1" 200 -
+2021-07-14 17:00:54,983 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:00:54] "GET /manage-data/hobby/new HTTP/1.1" 200 -
+2021-07-14 17:01:00,542 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:00,543 [INFO ] [                          info()] INSERT INTO hobby (name) VALUES (?)
+2021-07-14 17:01:00,544 [INFO ] [                          info()] [cached since 48.22s ago] ('fishing',)
+2021-07-14 17:01:00,546 [INFO ] [                          info()] COMMIT
+2021-07-14 17:01:00,719 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:00] "[32mPOST /manage-data/hobby/new HTTP/1.1[0m" 302 -
+2021-07-14 17:01:00,727 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:00,728 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:01:00,730 [INFO ] [                          info()] [cached since 59.22s ago] ()
+2021-07-14 17:01:00,732 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:01:00,732 [INFO ] [                          info()] [cached since 48.19s ago] (2,)
+2021-07-14 17:01:00,734 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:01:00,734 [INFO ] [                          info()] [cached since 48.19s ago] (3,)
+2021-07-14 17:01:00,736 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:01:00,736 [INFO ] [                          info()] [cached since 48.19s ago] (1,)
+2021-07-14 17:01:00,740 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:01:00,741 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:00] "GET /manage-data/hobbies/list HTTP/1.1" 200 -
+2021-07-14 17:01:07,660 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:07,661 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby 
+WHERE hobby.id = ?
+ LIMIT ? OFFSET ?
+2021-07-14 17:01:07,661 [INFO ] [                          info()] [generated in 0.00038s] (2, 1, 0)
+2021-07-14 17:01:07,667 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:01:07,668 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:07] "GET /manage-data/hobby/delete/2 HTTP/1.1" 200 -
+2021-07-14 17:01:08,945 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:08,945 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby 
+WHERE hobby.id = ?
+ LIMIT ? OFFSET ?
+2021-07-14 17:01:08,951 [INFO ] [                          info()] [cached since 1.29s ago] (2, 1, 0)
+2021-07-14 17:01:08,953 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:01:08,953 [INFO ] [                          info()] [cached since 56.41s ago] (2,)
+2021-07-14 17:01:08,955 [INFO ] [                          info()] DELETE FROM hobby WHERE hobby.id = ?
+2021-07-14 17:01:08,955 [INFO ] [                          info()] [generated in 0.00054s] (2,)
+2021-07-14 17:01:08,958 [INFO ] [                          info()] COMMIT
+2021-07-14 17:01:09,033 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:09] "[32mPOST /manage-data/hobby/delete/2 HTTP/1.1[0m" 302 -
+2021-07-14 17:01:09,041 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:09,042 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:01:09,042 [INFO ] [                          info()] [cached since 67.53s ago] ()
+2021-07-14 17:01:09,044 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:01:09,044 [INFO ] [                          info()] [cached since 56.5s ago] (3,)
+2021-07-14 17:01:09,046 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:01:09,046 [INFO ] [                          info()] [cached since 56.5s ago] (1,)
+2021-07-14 17:01:09,048 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:01:09,049 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:09] "GET /manage-data/hobbies/list HTTP/1.1" 200 -
+2021-07-14 17:01:13,168 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:13,175 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:01:13,175 [INFO ] [                          info()] [cached since 73.18s ago] ()
+2021-07-14 17:01:13,177 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:01:13,178 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:13] "GET / HTTP/1.1" 200 -
+2021-07-14 17:01:13,700 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:13,700 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:01:13,701 [INFO ] [                          info()] [cached since 73.7s ago] ()
+2021-07-14 17:01:13,702 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:01:13,702 [INFO ] [                          info()] [cached since 28.74s ago] (1,)
+2021-07-14 17:01:13,704 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:01:13,704 [INFO ] [                          info()] [cached since 39.03s ago] (2,)
+2021-07-14 17:01:13,708 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:01:13,709 [INFO ] [                          info()] [cached since 39.03s ago] (1,)
+2021-07-14 17:01:13,710 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:01:13,711 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:13] "GET /manage-data/friends/list HTTP/1.1" 200 -
+2021-07-14 17:01:15,884 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:15,886 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:01:15,886 [INFO ] [                          info()] [cached since 57.77s ago] ()
+2021-07-14 17:01:15,889 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:01:15,890 [INFO ] [                          info()] [cached since 74.38s ago] ()
+2021-07-14 17:01:15,891 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:01:15,892 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:15] "GET /manage-data/friend/new HTTP/1.1" 200 -
+2021-07-14 17:01:31,997 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:31,998 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:01:32,007 [INFO ] [                          info()] [cached since 73.89s ago] ()
+2021-07-14 17:01:32,011 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:01:32,011 [INFO ] [                          info()] [cached since 90.5s ago] ()
+2021-07-14 17:01:32,014 [INFO ] [                          info()] INSERT INTO friend (name, city_id) VALUES (?, ?)
+2021-07-14 17:01:32,017 [INFO ] [                          info()] [cached since 47.21s ago] ('Hillary ', 2)
+2021-07-14 17:01:32,019 [INFO ] [                          info()] INSERT INTO friend_mtm_hobby (friend_id, hobby_id) VALUES (?, ?)
+2021-07-14 17:01:32,020 [INFO ] [                          info()] [cached since 47.21s ago] (3, 1)
+2021-07-14 17:01:32,021 [INFO ] [                          info()] COMMIT
+2021-07-14 17:01:32,147 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:32] "[32mPOST /manage-data/friend/new HTTP/1.1[0m" 302 -
+2021-07-14 17:01:32,157 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:32,157 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:01:32,161 [INFO ] [                          info()] [cached since 92.16s ago] ()
+2021-07-14 17:01:32,164 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:01:32,165 [INFO ] [                          info()] [cached since 47.2s ago] (1,)
+2021-07-14 17:01:32,167 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:01:32,167 [INFO ] [                          info()] [cached since 57.49s ago] (2,)
+2021-07-14 17:01:32,169 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:01:32,169 [INFO ] [                          info()] [cached since 47.21s ago] (2,)
+2021-07-14 17:01:32,173 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:01:32,174 [INFO ] [                          info()] [cached since 57.5s ago] (3,)
+2021-07-14 17:01:32,177 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:01:32,177 [INFO ] [                          info()] [cached since 57.5s ago] (1,)
+2021-07-14 17:01:32,181 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:01:32,184 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:32] "GET /manage-data/friends/list HTTP/1.1" 200 -
+2021-07-14 17:01:36,171 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:36,173 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE friend.id = ?
+ LIMIT ? OFFSET ?
+2021-07-14 17:01:36,174 [INFO ] [                          info()] [generated in 0.00050s] (3, 1, 0)
+2021-07-14 17:01:36,176 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:01:36,177 [INFO ] [                          info()] [cached since 51.21s ago] (2,)
+2021-07-14 17:01:36,178 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:01:36,178 [INFO ] [                          info()] [cached since 61.5s ago] (3,)
+2021-07-14 17:01:36,182 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:01:36,183 [INFO ] [                          info()] [cached since 78.07s ago] ()
+2021-07-14 17:01:36,185 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:01:36,186 [INFO ] [                          info()] [cached since 94.68s ago] ()
+2021-07-14 17:01:36,188 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:01:36,189 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:36] "GET /manage-data/friend/edit/3 HTTP/1.1" 200 -
+2021-07-14 17:01:39,305 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:39,307 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE friend.id = ?
+ LIMIT ? OFFSET ?
+2021-07-14 17:01:39,307 [INFO ] [                          info()] [cached since 3.134s ago] (3, 1, 0)
+2021-07-14 17:01:39,309 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:01:39,309 [INFO ] [                          info()] [cached since 54.34s ago] (2,)
+2021-07-14 17:01:39,312 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:01:39,313 [INFO ] [                          info()] [cached since 64.64s ago] (3,)
+2021-07-14 17:01:39,315 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:01:39,316 [INFO ] [                          info()] [cached since 81.2s ago] ()
+2021-07-14 17:01:39,317 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:01:39,317 [INFO ] [                          info()] [cached since 97.81s ago] ()
+2021-07-14 17:01:39,320 [INFO ] [                          info()] DELETE FROM friend_mtm_hobby WHERE friend_mtm_hobby.friend_id = ? AND friend_mtm_hobby.hobby_id = ?
+2021-07-14 17:01:39,322 [INFO ] [                          info()] [generated in 0.00197s] (3, 1)
+2021-07-14 17:01:39,322 [INFO ] [                          info()] INSERT INTO friend_mtm_hobby (friend_id, hobby_id) VALUES (?, ?)
+2021-07-14 17:01:39,325 [INFO ] [                          info()] [cached since 54.52s ago] (3, 3)
+2021-07-14 17:01:39,326 [INFO ] [                          info()] COMMIT
+2021-07-14 17:01:39,374 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:39] "[32mPOST /manage-data/friend/edit/3 HTTP/1.1[0m" 302 -
+2021-07-14 17:01:39,380 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:01:39,380 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:01:39,380 [INFO ] [                          info()] [cached since 99.38s ago] ()
+2021-07-14 17:01:39,382 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:01:39,382 [INFO ] [                          info()] [cached since 54.42s ago] (1,)
+2021-07-14 17:01:39,383 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:01:39,384 [INFO ] [                          info()] [cached since 64.71s ago] (2,)
+2021-07-14 17:01:39,385 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:01:39,387 [INFO ] [                          info()] [cached since 54.42s ago] (2,)
+2021-07-14 17:01:39,392 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:01:39,392 [INFO ] [                          info()] [cached since 64.72s ago] (3,)
+2021-07-14 17:01:39,395 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:01:39,395 [INFO ] [                          info()] [cached since 64.72s ago] (1,)
+2021-07-14 17:01:39,398 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:01:39,399 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:01:39] "GET /manage-data/friends/list HTTP/1.1" 200 -
+2021-07-14 17:02:06,652 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:02:06,659 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:02:06,660 [INFO ] [                          info()] [cached since 126.7s ago] ()
+2021-07-14 17:02:06,662 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:02:06,662 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:02:06] "GET / HTTP/1.1" 200 -
+2021-07-14 17:02:07,379 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:02:07,384 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:02:07,384 [INFO ] [                          info()] [cached since 127.4s ago] ()
+2021-07-14 17:02:07,386 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:02:07,386 [INFO ] [                          info()] [cached since 82.42s ago] (1,)
+2021-07-14 17:02:07,388 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:02:07,388 [INFO ] [                          info()] [cached since 92.71s ago] (2,)
+2021-07-14 17:02:07,389 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:02:07,390 [INFO ] [                          info()] [cached since 82.43s ago] (2,)
+2021-07-14 17:02:07,391 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:02:07,391 [INFO ] [                          info()] [cached since 92.71s ago] (3,)
+2021-07-14 17:02:07,392 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:02:07,392 [INFO ] [                          info()] [cached since 92.72s ago] (1,)
+2021-07-14 17:02:07,394 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:02:07,395 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:02:07] "GET /manage-data/friends/list HTTP/1.1" 200 -
+2021-07-14 17:10:10,790 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:10:10,790 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:10:10,792 [INFO ] [                          info()] [cached since 610.8s ago] ()
+2021-07-14 17:10:10,794 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:10:10,796 [INFO ] [                          info()] [cached since 565.8s ago] (1,)
+2021-07-14 17:10:10,799 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:10,799 [INFO ] [                          info()] [cached since 576.1s ago] (2,)
+2021-07-14 17:10:10,801 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:10:10,801 [INFO ] [                          info()] [cached since 565.8s ago] (2,)
+2021-07-14 17:10:10,807 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:10,810 [INFO ] [                          info()] [cached since 576.1s ago] (3,)
+2021-07-14 17:10:10,817 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:10,819 [INFO ] [                          info()] [cached since 576.1s ago] (1,)
+2021-07-14 17:10:10,822 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:10:10,823 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:10:10] "GET /manage-data/friends/list HTTP/1.1" 200 -
+2021-07-14 17:10:11,621 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:10:11,621 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:10:11,621 [INFO ] [                          info()] [cached since 611.6s ago] ()
+2021-07-14 17:10:11,623 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:10:11,623 [INFO ] [                          info()] [cached since 566.7s ago] (1,)
+2021-07-14 17:10:11,625 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:11,626 [INFO ] [                          info()] [cached since 576.9s ago] (2,)
+2021-07-14 17:10:11,627 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:10:11,627 [INFO ] [                          info()] [cached since 566.7s ago] (2,)
+2021-07-14 17:10:11,628 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:11,629 [INFO ] [                          info()] [cached since 577s ago] (3,)
+2021-07-14 17:10:11,630 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:11,630 [INFO ] [                          info()] [cached since 577s ago] (1,)
+2021-07-14 17:10:11,632 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:10:11,637 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:10:11] "GET /manage-data/friends/list HTTP/1.1" 200 -
+2021-07-14 17:10:19,458 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:10:19,459 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:10:19,460 [INFO ] [                          info()] [cached since 601.3s ago] ()
+2021-07-14 17:10:19,462 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:10:19,462 [INFO ] [                          info()] [cached since 618s ago] ()
+2021-07-14 17:10:19,464 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:10:19,464 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:10:19] "GET /manage-data/friend/new HTTP/1.1" 200 -
+2021-07-14 17:10:26,469 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:10:26,472 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:10:26,473 [INFO ] [                          info()] [cached since 608.4s ago] ()
+2021-07-14 17:10:26,476 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:10:26,476 [INFO ] [                          info()] [cached since 625s ago] ()
+2021-07-14 17:10:26,479 [INFO ] [                          info()] INSERT INTO friend (name, city_id) VALUES (?, ?)
+2021-07-14 17:10:26,479 [INFO ] [                          info()] [cached since 581.7s ago] ('Jensen ', 2)
+2021-07-14 17:10:26,481 [INFO ] [                          info()] INSERT INTO friend_mtm_hobby (friend_id, hobby_id) VALUES (?, ?)
+2021-07-14 17:10:26,484 [INFO ] [                          info()] [cached since 581.7s ago] (4, 1)
+2021-07-14 17:10:26,487 [INFO ] [                          info()] COMMIT
+2021-07-14 17:10:26,650 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:10:26] "[32mPOST /manage-data/friend/new HTTP/1.1[0m" 302 -
+2021-07-14 17:10:26,658 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:10:26,658 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:10:26,659 [INFO ] [                          info()] [cached since 626.7s ago] ()
+2021-07-14 17:10:26,660 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:10:26,660 [INFO ] [                          info()] [cached since 581.7s ago] (1,)
+2021-07-14 17:10:26,661 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:26,661 [INFO ] [                          info()] [cached since 592s ago] (2,)
+2021-07-14 17:10:26,663 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:10:26,663 [INFO ] [                          info()] [cached since 581.7s ago] (2,)
+2021-07-14 17:10:26,664 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:26,664 [INFO ] [                          info()] [cached since 592s ago] (3,)
+2021-07-14 17:10:26,666 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:26,666 [INFO ] [                          info()] [cached since 592s ago] (4,)
+2021-07-14 17:10:26,668 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:26,668 [INFO ] [                          info()] [cached since 592s ago] (1,)
+2021-07-14 17:10:26,672 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:10:26,673 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:10:26] "GET /manage-data/friends/list HTTP/1.1" 200 -
+2021-07-14 17:10:44,535 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:10:44,536 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE friend.id = ?
+ LIMIT ? OFFSET ?
+2021-07-14 17:10:44,536 [INFO ] [                          info()] [cached since 548.4s ago] (1, 1, 0)
+2021-07-14 17:10:44,539 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:10:44,540 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:10:44] "GET /manage-data/friend/delete/1 HTTP/1.1" 200 -
+2021-07-14 17:10:45,824 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:10:45,825 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE friend.id = ?
+ LIMIT ? OFFSET ?
+2021-07-14 17:10:45,825 [INFO ] [                          info()] [cached since 549.7s ago] (1, 1, 0)
+2021-07-14 17:10:45,826 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:45,829 [INFO ] [                          info()] [cached since 611.2s ago] (1,)
+2021-07-14 17:10:45,836 [INFO ] [                          info()] DELETE FROM friend WHERE friend.id = ?
+2021-07-14 17:10:45,838 [INFO ] [                          info()] [generated in 0.00139s] (1,)
+2021-07-14 17:10:45,839 [INFO ] [                          info()] COMMIT
+2021-07-14 17:10:45,982 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:10:45] "[32mPOST /manage-data/friend/delete/1 HTTP/1.1[0m" 302 -
+2021-07-14 17:10:45,992 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:10:45,992 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:10:45,994 [INFO ] [                          info()] [cached since 646s ago] ()
+2021-07-14 17:10:45,996 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:10:46,000 [INFO ] [                          info()] [cached since 601s ago] (1,)
+2021-07-14 17:10:46,003 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:46,005 [INFO ] [                          info()] [cached since 611.3s ago] (2,)
+2021-07-14 17:10:46,007 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:10:46,007 [INFO ] [                          info()] [cached since 601s ago] (2,)
+2021-07-14 17:10:46,009 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:46,010 [INFO ] [                          info()] [cached since 611.3s ago] (3,)
+2021-07-14 17:10:46,011 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:10:46,012 [INFO ] [                          info()] [cached since 611.3s ago] (4,)
+2021-07-14 17:10:46,015 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:10:46,018 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:10:46] "GET /manage-data/friends/list HTTP/1.1" 200 -
+2021-07-14 17:10:48,315 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:10:48,315 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:10:48,315 [INFO ] [                          info()] [cached since 648.3s ago] ()
+2021-07-14 17:10:48,320 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:10:48,320 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:10:48] "GET / HTTP/1.1" 200 -
+2021-07-14 17:10:49,374 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:10:49,375 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:10:49,375 [INFO ] [                          info()] [cached since 647.9s ago] ()
+2021-07-14 17:10:49,377 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:10:49,377 [INFO ] [                          info()] [cached since 636.8s ago] (3,)
+2021-07-14 17:10:49,384 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:10:49,384 [INFO ] [                          info()] [cached since 636.8s ago] (1,)
+2021-07-14 17:10:49,387 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:10:49,388 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:10:49] "GET /manage-data/hobbies/list HTTP/1.1" 200 -
+2021-07-14 17:11:00,961 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:11:00,962 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:11:00,962 [INFO ] [                          info()] [cached since 661s ago] ()
+2021-07-14 17:11:00,964 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:11:00,965 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:11:00] "GET / HTTP/1.1" 200 -
+2021-07-14 17:22:49,309 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:22:49,310 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:22:49,310 [INFO ] [                          info()] [cached since 1351s ago] ()
+2021-07-14 17:22:49,312 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE ? = friend.city_id ORDER BY friend.name
+2021-07-14 17:22:49,312 [INFO ] [                          info()] [cached since 1346s ago] (2,)
+2021-07-14 17:22:49,314 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE ? = friend.city_id ORDER BY friend.name
+2021-07-14 17:22:49,314 [INFO ] [                          info()] [cached since 1346s ago] (1,)
+2021-07-14 17:22:49,316 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:22:49,318 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:22:49] "GET /manage-data/cities/list HTTP/1.1" 200 -
+2021-07-14 17:22:54,163 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:22:54,164 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:22:54,165 [INFO ] [                          info()] [cached since 1374s ago] ()
+2021-07-14 17:22:54,167 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:22:54,168 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:22:54] "GET / HTTP/1.1" 200 -
+2021-07-14 17:22:56,093 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:22:56,096 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:22:56,096 [INFO ] [                          info()] [cached since 1376s ago] ()
+2021-07-14 17:22:56,097 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:22:56,097 [INFO ] [                          info()] [cached since 1331s ago] (1,)
+2021-07-14 17:22:56,098 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:22:56,100 [INFO ] [                          info()] [cached since 1341s ago] (2,)
+2021-07-14 17:22:56,102 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city 
+WHERE city.id = ?
+2021-07-14 17:22:56,103 [INFO ] [                          info()] [cached since 1331s ago] (2,)
+2021-07-14 17:22:56,105 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:22:56,106 [INFO ] [                          info()] [cached since 1341s ago] (3,)
+2021-07-14 17:22:56,108 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.friend_id AND hobby.id = friend_mtm_hobby.hobby_id ORDER BY hobby.name
+2021-07-14 17:22:56,110 [INFO ] [                          info()] [cached since 1341s ago] (4,)
+2021-07-14 17:22:56,113 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:22:56,115 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:22:56] "GET /manage-data/friends/list HTTP/1.1" 200 -
+2021-07-14 17:22:57,830 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:22:57,831 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:22:57,831 [INFO ] [                          info()] [cached since 1360s ago] ()
+2021-07-14 17:22:57,833 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:22:57,834 [INFO ] [                          info()] [cached since 1376s ago] ()
+2021-07-14 17:22:57,836 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:22:57,837 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:22:57] "GET /manage-data/friend/new HTTP/1.1" 200 -
+2021-07-14 17:48:26,876 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:48:26,898 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:48:26,898 [INFO ] [                          info()] [cached since 2907s ago] ()
+2021-07-14 17:48:26,900 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:48:26,900 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:48:26] "GET / HTTP/1.1" 200 -
+2021-07-14 17:48:28,552 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:48:28,552 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:48:28,552 [INFO ] [                          info()] [cached since 2890s ago] ()
+2021-07-14 17:48:28,554 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE ? = friend.city_id ORDER BY friend.name
+2021-07-14 17:48:28,554 [INFO ] [                          info()] [cached since 2885s ago] (2,)
+2021-07-14 17:48:28,555 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE ? = friend.city_id ORDER BY friend.name
+2021-07-14 17:48:28,557 [INFO ] [                          info()] [cached since 2885s ago] (1,)
+2021-07-14 17:48:28,560 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:48:28,562 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:48:28] "GET /manage-data/cities/list HTTP/1.1" 200 -
+2021-07-14 17:48:30,223 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:48:30,224 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:48:30,225 [INFO ] [                          info()] [cached since 2910s ago] ()
+2021-07-14 17:48:30,227 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:48:30,227 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:48:30] "GET / HTTP/1.1" 200 -
+2021-07-14 17:48:30,919 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:48:30,920 [INFO ] [                          info()] SELECT hobby.id AS hobby_id, hobby.name AS hobby_name 
+FROM hobby ORDER BY hobby.name
+2021-07-14 17:48:30,921 [INFO ] [                          info()] [cached since 2909s ago] ()
+2021-07-14 17:48:30,922 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:48:30,922 [INFO ] [                          info()] [cached since 2898s ago] (3,)
+2021-07-14 17:48:30,924 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend, friend_mtm_hobby 
+WHERE ? = friend_mtm_hobby.hobby_id AND friend.id = friend_mtm_hobby.friend_id ORDER BY friend.name
+2021-07-14 17:48:30,924 [INFO ] [                          info()] [cached since 2898s ago] (1,)
+2021-07-14 17:48:30,926 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:48:30,927 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:48:30] "GET /manage-data/hobbies/list HTTP/1.1" 200 -
+2021-07-14 17:48:43,169 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:48:43,169 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:48:43,171 [INFO ] [                          info()] [cached since 2923s ago] ()
+2021-07-14 17:48:43,173 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:48:43,174 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:48:43] "GET / HTTP/1.1" 200 -
+2021-07-14 17:48:44,056 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:48:44,057 [INFO ] [                          info()] SELECT city.id AS city_id, city.name AS city_name 
+FROM city ORDER BY city.name
+2021-07-14 17:48:44,058 [INFO ] [                          info()] [cached since 2906s ago] ()
+2021-07-14 17:48:44,060 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE ? = friend.city_id ORDER BY friend.name
+2021-07-14 17:48:44,061 [INFO ] [                          info()] [cached since 2901s ago] (2,)
+2021-07-14 17:48:44,063 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend 
+WHERE ? = friend.city_id ORDER BY friend.name
+2021-07-14 17:48:44,063 [INFO ] [                          info()] [cached since 2901s ago] (1,)
+2021-07-14 17:48:44,067 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:48:44,068 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:48:44] "GET /manage-data/cities/list HTTP/1.1" 200 -
+2021-07-14 17:48:48,163 [INFO ] [                          info()] BEGIN (implicit)
+2021-07-14 17:48:48,173 [INFO ] [                          info()] SELECT friend.id AS friend_id, friend.name AS friend_name, friend.city_id AS friend_city_id 
+FROM friend ORDER BY friend.name
+2021-07-14 17:48:48,173 [INFO ] [                          info()] [cached since 2928s ago] ()
+2021-07-14 17:48:48,175 [INFO ] [                          info()] ROLLBACK
+2021-07-14 17:48:48,176 [INFO ] [                          _log()] 127.0.0.1 - - [14/Jul/2021 17:48:48] "GET / HTTP/1.1" 200 -
